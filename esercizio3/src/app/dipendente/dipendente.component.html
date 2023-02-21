@@ -1,0 +1,26 @@
+<h3>Esercizio3</h3>
+<article>
+    <div>
+        <h4>Dipendente codice : {{dipendente.codice}}</h4>
+        <p><img [src]="dipendente.immagine"alt="immagine dipendente"></p>
+    </div>
+    <div class="anagrafica">
+       <h5>Dati Anagrafici</h5>
+       <p>Cognome: {{dipendente.cognome}}</p>
+       <p>Nome: {{dipendente.nome}}</p>
+       <p>Data assunzione: {{dipendente.assunzione}}</p>
+       <p>indirizzo: {{dipendente.indirizzo}}</p>
+       <p>CAP: {{dipendente.cap}}</p>
+       <p>Citta: {{dipendente.citta}}</p>
+       <p><button (click)="onClick()">Mostra informazioni di contatto</button></p>
+       
+        <h5 [hidden]="nascosto">Dati Anagrafici</h5>
+        <p [hidden]="nascosto">Telefono: {{dipendente.telefono}}</p>
+        <p [hidden]="nascosto">E-mail: {{dipendente.email}}</p>
+        <h5 [hidden]="nascosto">Modifica</h5>
+        <p [hidden]="nascosto"><input [(ngModel)]="dipendente.telefono" type="text"></p>
+        <p [hidden]="nascosto"><input [(ngModel)]="dipendente.email" type="text"></p>
+      
+    </div>
+</article>
+
