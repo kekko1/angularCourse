@@ -1,0 +1,21 @@
+<h2>Gestione studenti</h2>
+<p>elenco studenti</p>
+<p><input type="text" name="matricola" id="" #matricola>Matricola</p>
+<p><input type="text" name="cognome" id="" #cognome>Cognome</p>
+    <p><input type="text" name="nome" id="" #nome>Nome</p>
+        <p><input type="text" name="media" id="" #media>Media</p>
+        <button (click)="aggiungiMatricola(matricola,cognome,nome,media)">aggiungi</button>
+<table>
+    <tr>
+        <td>Matricola</td>
+        <td>Cognome</td>
+        <td>Nome</td>
+        <td>Media</td>
+    </tr>
+    <tr *ngFor="let s of elencoStudenti">
+        <td>{{s.matricola}}</td>
+        <td>{{s.cognome}}</td>
+        <td>{{s.nome}}</td>
+        <td>{{s.media}}</td>
+    </tr>
+</table>

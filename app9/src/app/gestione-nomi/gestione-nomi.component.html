@@ -1,0 +1,11 @@
+<h2>Gestione nomi</h2>
+<p>elenco nomi</p>
+<p>
+    Nuovo nome: <input type="text" #nome>
+    <button (click)="inserisciNome(nome)">inserisci</button>
+</p>
+<ul>
+    <li *ngFor="let n of nomi">{{n}}</li>
+</ul>
+
+

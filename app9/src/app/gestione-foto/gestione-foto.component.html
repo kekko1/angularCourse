@@ -1,0 +1,13 @@
+
+<table>
+    <tr>
+        <td> id</td>
+        <td> titolo</td>
+        <td> immagine</td>
+    </tr>
+    <tr *ngFor="let f of fotografie">
+        <td> {{f.id}}</td>
+        <td> {{f.title}}</td>
+        <td> <a [href]="f.url"  target="_blank"><img [src]="f.thumbnailUrl" alt=""></a> </td>
+    </tr>
+</table>
