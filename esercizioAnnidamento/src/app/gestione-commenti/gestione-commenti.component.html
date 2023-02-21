@@ -1,0 +1,22 @@
+<h3>Gestione commenti </h3>
+<app-commento  
+    (selezionaCommento)="selezionato($event)" 
+    [commento]="c" 
+    *ngFor="let c of elencoCommenti">
+</app-commento>
+
+<div>
+    <h3 *ngIf=(CommentoSelezionato)>
+        <h3>Dettagli commento </h3>
+        <article >
+           
+                <p>{{CommentoSelezionato.postId}}</p>
+                <p>{{CommentoSelezionato.id}}</p>
+                <p>{{CommentoSelezionato.name}}</p>
+                <p>{{CommentoSelezionato.email}}</p>
+                <p>{{CommentoSelezionato.body}}</p> 
+           
+        </article>
+    </h3>
+</div>
+
