@@ -1,0 +1,77 @@
+<h2>Reactive form builder</h2>
+<h2>Reactive form</h2>
+
+<div class="row">
+    <div class="col-6">
+        <h3>Form</h3>
+       
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="username">Username</label>
+                <input 
+                    type="text" 
+                    name="username" 
+                    id="username" 
+                    class="form-control"
+                    formControlName="username"
+                    [class.is-invalid]="loginForm.get('username')?.invalid && loginForm.get('username')?.touched"
+                >
+                <div class="invalid-feedback">errore campo username:
+                    <span *ngIf="loginForm.get('username')?.errors?.['required']">  obbligatorio</span>
+                    <span *ngIf="loginForm.get('username')?.errors?.['admin']"> admin non ammesso</span>
+
+                </div>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="loginEmail" 
+                formControlName="loginEmail" (change)="cambiaLogin()">
+                <label class="form-check-label" for="loginEmail">Effettua accesso tramite mail</label>
+            </div>
+            <div *ngIf="loginForm.get('loginEmail')?.value" class="mb-3">
+                <label for="email">Email</label>
+                <input 
+                    type="text"
+                    id="email" 
+                    class="form-control" 
+                    formControlName="email" 
+                    [class.is-invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched "
+                >
+                <div class="invalid-feedback">
+                    Errore campo email 
+                    <span *ngIf="loginForm.get('email')?.errors?.['required']"> email obbligatorio</span>
+                    <span *ngIf="loginForm.get('email')?.errors?.['email']"> email non corretta</span>
+                </div>
+            </div>
+           
+
+            <div class="mb-3">
+                <label for="password">Password</label>
+                <input 
+                    type="password"
+                    id="password" 
+                    class="form-control" 
+                    formControlName="password" 
+                    [class.is-invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched "
+                >
+                <div class="invalid-feedback">
+                    password 
+                    <span *ngIf="loginForm.get('password')?.errors?.['required']"> obbligatorio</span>
+                    <span *ngIf="loginForm.get('password')?.errors?.['minlength']"> corta</span>
+                </div>
+            </div>
+            <input type="submit" value="Login" class="btn btn-info" [disabled]="loginForm.invalid"> 
+        </form>
+    </div>
+    <div class="col">
+        <h3>DatiForm</h3>
+        <pre>
+            {{loginForm.value | json}}
+        </pre>
+        <h3>Stato form</h3>
+        <pre>
+            {{loginForm.touched}}
+            {{loginForm.dirty}}
+            {{loginForm.valid}}
+        </pre>
+    </div>
+</div>

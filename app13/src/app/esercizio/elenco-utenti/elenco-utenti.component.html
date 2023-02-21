@@ -1,0 +1,20 @@
+<h3>Elenco Utenti</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Nome</td>
+            <td>Cognome</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let utente of elencoUtenti">
+            <td>{{utente.id}}</td>
+            <td>{{utente.nome}}</td>
+            <td>{{utente.cognome}}</td>
+        </tr>
+    </tbody>
+</table>
+<p>
+    <button class="btn btn-primary" routerLink="/esercizio/nuovo">Nuovo</button>
+</p>

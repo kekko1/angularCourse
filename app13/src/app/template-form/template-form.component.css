@@ -1,0 +1,10 @@
+/* input.ng-touched,select.ng-touched,textarea.ng-touched{
+   background-color: burlywood;
+} */
+/* input.ng-dirty,select.ng-dirty,textarea.ng-dirty{
+    background-color: burlywood;
+ } */
+
+/*  input.ng-invalid,select.ng-invalid,textarea.ng-invalid{
+    outline: 2px solid red;
+ } */

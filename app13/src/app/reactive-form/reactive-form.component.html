@@ -1,0 +1,51 @@
+<h2>Reactive form</h2>
+
+<div class="row">
+    <div class="col-6">
+        <h3>Form</h3>
+       
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="username">Username</label>
+                <input 
+                    type="text"  
+                    id="username" 
+                    class="form-control"  
+                    formControlName="username"
+                    [class.is-invalid]="loginForm.get('username')?.invalid"
+                    >
+                    <div class="invalid-feedback">username obbligatorio
+                        <span *ngIf="loginForm.get('username')?.errors?.['required']">username obbligatorio</span>
+                    </div>
+            </div>
+            <div class="mb-3">
+                <label for="password">Password</label>
+                <input type="password"  id="password" class="form-control" required formControlName="password">
+            </div>
+            <fieldset formGroupName="contatti" class="mb-3">
+                <legend>Contatti</legend>
+                <label for="telefono">Telefono</label>
+                <input type="text" name="telefono"id="telefono" class="form-control" required formControlName="telefono">
+                <div class="invalid-feedback">telefono obbligatorio</div>
+                
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" class="form-control" required formControlName="email">
+                <div class="invalid-feedback">email obbligatorio</div>
+            </fieldset>
+            
+            <input type="submit" value="Login" class="btn btn-info" [disabled]="loginForm.invalid"> 
+        </form>
+    </div>
+    <div class="col">
+        <h3>DatiForm</h3>
+        <pre>
+            {{loginForm.value | json}}
+        </pre>
+        <h3>Stato form</h3>
+        <pre>
+            {{loginForm.touched}}
+            {{loginForm.dirty}}
+            {{loginForm.valid}}
+        </pre>
+    </div>
+</div>

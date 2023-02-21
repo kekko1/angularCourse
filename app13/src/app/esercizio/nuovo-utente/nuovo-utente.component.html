@@ -1,0 +1,58 @@
+<h2>Inserisci utente</h2>
+
+
+<form #form="ngForm"  (ngSubmit)="onSubmit(form)">
+    <div *ngIf="!form.valid && form.submitted " class="mb-3 alert alert-danger">
+        <h4>controllare i dati inseriti sono presenti degli errori</h4>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="id">Id</label> 
+        <input 
+            [(ngModel)]="utenteForm.id"
+            [class.is-invalid]="id.invalid && form.submitted"
+            type="text" 
+            name="id" 
+            id="id" 
+            class="form-control"
+            #id="ngModel"  
+        
+            required >
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="nome">Nome</label> 
+        <input 
+            [(ngModel)]="utenteForm.nome" 
+            [class.is-invalid]="nome.invalid && form.submitted"
+            type="text" 
+            name="nome" 
+            id="nome" 
+            class="form-control" 
+            #nome="ngModel"
+            minlength="3"
+            required>
+            <div class="invalid-feedback"> Campo nome non valido oppure vuoto
+                <p *ngIf="nome.errors?.['required']">nome obbligatorio</p>
+                <p *ngIf="nome.errors?.['minlength']">troppo corto almeno tre caratteri</p>
+            </div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="cognome">Cognome</label>
+        <input   
+            [class.is-invalid]="cognome.invalid && form.submitted"
+            type="text" 
+            name="cognome" 
+            id="cognome" 
+            #cognome="ngModel" 
+            [(ngModel)]="utenteForm.cognome" 
+            class="form-control"
+            required
+            minlength="2"
+            >
+            <div class="invalid-feedback"> Campo nome non valido oppure vuoto
+                <p *ngIf="cognome.errors?.['required']">cognome obbligatorio</p>
+                <p *ngIf="cognome.errors?.['minlength']">troppo corto almeno due caratteri</p>
+            </div>
+    </div>
+    <input class="btn btn-primary" type="submit" value="invia"> 
+    <input class="btn btn-secondary" type="reset" value="cancella">
+</form>

@@ -1,0 +1,59 @@
+<h2>Bootstrap forms</h2>
+<form ngNativeValidate>
+    <div class="mb-3">
+        <label class="form-label" for="nome">Nome</label> 
+        <input type="text" name="nome" id="nome" placeholder="nome utente" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="cognome">Cognome</label>
+        <input type="text" name="cognome" id="cognome" placeholder="cognome utente" class="form-control">
+        
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="password">Password</label>
+        <input type="password" name="password" id="password" minlength="6" maxlength="8" class="form-control">
+    </div>
+        
+   <fieldset class="mb-3">
+        <legend>Dove vivi</legend>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="stato" id="statoit" value="italia">
+            <label class="form-check-label" for="statoit"> Italia</label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input"type="radio" name="stato" id="statoes" value="estero">
+            <label class="form-check-label"for="statoes"> Estero</label>
+        </div>
+   </fieldset>
+
+
+   <fieldset class="mb-3">
+    <legend>Interessi</legend>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="interessi" id="interessiviaggi" value="viaggi">
+            <label class="form-check-label" for="interessiviaggi"> Viaggi</label> 
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" name="interessi" id="interessilibri" value="libri">
+            <label class="form-check-label" for="interessilibri"> Libri</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-label" class="form-check-input" type="checkbox" name="interessi" id="interessisocial" value="social">
+            <label for="interessisocial"> Social</label> 
+        </div>
+    </fieldset>
+    <div class="mb-3">
+        <label class="form-label" for="titolostudio">Titolo di studio</label>
+        <select class="form-select"  name="titolostudio" id="titolostudio">        
+            <option value="">Diploma</option>
+            <option value="">Laurea</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="commenti">Commenti</label><br>
+        <textarea class="form-control" name="commenti" id="commenti" cols="50" rows="4"></textarea>
+    </div>
+
+    <input class="btn btn-primary" type="submit" value="invia"> 
+    <input class="btn btn-secondary" type="reset" value="cancella">
+</form>
