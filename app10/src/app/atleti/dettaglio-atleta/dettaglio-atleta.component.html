@@ -1,0 +1,20 @@
+<h2>Dettaglio Atleta {{atleta.id}}</h2>
+<p>
+    Cognome : {{atleta.cognome}}
+</p>
+<p>
+    Nome : {{atleta.nome}}
+</p>
+<p>
+    Punti :{{ atleta.punti}}
+</p>
+<p>
+    <a routerLink="/atleti/{{atleta.id}}/modifica">Modifica atleta</a>
+</p>
+<p>
+    
+    <button (click)="elimina(atleta.id)">Elimina atleta</button>
+</p>
+<p>
+    <a routerLink="/atleti">Torna indietro</a>
+</p>

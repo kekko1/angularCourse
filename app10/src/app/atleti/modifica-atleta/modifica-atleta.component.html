@@ -1,0 +1,9 @@
+<h2>Modifica Atleta</h2>
+<p>Modifica i dati per l'atleta {{atleta.id}}</p>
+<p>
+   
+    <input type="text" [value]="atleta.cognome" #cognome> Cognome <br>
+    <input type="text" [value]="atleta.nome" #nome> Nome <br>
+    <input type="text" [value]="atleta.punti" #punteggio> Punteggio <br>
+    <button (click)="modifica(cognome,nome,punteggio)">modifica</button>
+</p>
