@@ -1,0 +1,18 @@
+<h3>Dati del pacco {{mioPacco.codice}}</h3>
+<p>Contenuto: {{mioPacco.contenuto}}</p>
+<p>Peso: {{mioPacco.peso}}</p>
+
+<h3>Dati del pacchi</h3>
+<ul>
+    <li [class.selezionato]="p==paccoSelezionato" *ngFor="let p of elencoPacchi" (click)="seleziona(p)">
+        {{p.codice}} - {{p.contenuto}} - {{p.peso}} - 
+        {{ p.pesoImballo ? "( Imballo: "+ p.pesoImballo+" Kg) " : ""}} 
+    </li>
+</ul>
+<div *ngIf="paccoSelezionato">
+    <h3>Dati del pacchi (<span (click)="deseleziona()">chiudi</span> )</h3>
+    <p> <input [(ngModel)]="paccoSelezionato.codice" type="text"> Codice: {{paccoSelezionato.codice}}</p>
+    <p> <input [(ngModel)]="paccoSelezionato.contenuto" type="text"> Contenuto: {{paccoSelezionato.contenuto}}</p>
+    <p> <input [(ngModel)]="paccoSelezionato.peso" type="text">Peso: {{paccoSelezionato.peso}} Kg</p>
+    <p *ngIf="paccoSelezionato.pesoImballo">  {{ paccoSelezionato.pesoImballo ? "( Imballo: "+ paccoSelezionato.pesoImballo+" Kg) " : ""}} </p>
+</div>

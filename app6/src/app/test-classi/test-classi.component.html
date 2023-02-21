@@ -1,0 +1,11 @@
+<h3>Dati</h3>
+<ul>
+    <li>Nome: {{persona.nome}}</li>
+    <li>Cognome: {{persona.cognome}}</li>
+    <li>Cognome: {{persona.anni}}</li>
+</ul>
+<ul>
+    <li *ngFor="let p of elencoPersone">
+        <p> Nome: {{p.nome}} Cognome: {{p.cognome}} eta: {{p.anni}}</p>
+    </li>
+</ul>
