@@ -1,0 +1,78 @@
+<h2>Reactive form builder</h2>
+<h2>Reactive form</h2>
+
+<div class="row">
+    <div class="col-6">
+        <h3>Form</h3>
+       
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+                <label for="id">Id</label>
+                <input 
+                    type="text" 
+                    name="id" 
+                    id="id" 
+                    class="form-control"
+                    formControlName="id"
+                    [class.is-invalid]="form.get('id')?.invalid && form.get('id')?.touched"
+                >
+                <div class="invalid-feedback">errore campo id:
+                    <span *ngIf="form.get('id')?.errors?.['id']">  obbligatorio</span>
+
+                </div>
+            </div>
+           
+            <div class="mb-3">
+                <label for="userId">userId</label>
+                <input 
+                    type="text"
+                    id="userId" 
+                    class="form-control" 
+                    formControlName="userId" 
+                    [class.is-invalid]="form.get('userId')?.invalid
+                     && form.get('userId')?.touched "
+                >
+                <div class="invalid-feedback">
+                    Errore campo userId 
+                    <span *ngIf="form.get('userId')?.errors?.['required']"> userId obbligatorio</span>
+                    
+                </div>
+            </div>
+           
+
+            <div class="mb-3">
+                <label for="title">title</label>
+                <input 
+                    type="text"
+                    id="title" 
+                    class="form-control" 
+                    formControlName="title" 
+                    [class.is-invalid]="form.get('title')?.invalid && form.get('title')?.touched "
+                >
+                <div class="invalid-feedback">
+                    title 
+                    <span *ngIf="form.get('title')?.errors?.['required']"> obbligatorio</span>
+                    
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="body">body</label>
+                <input 
+                    type="text"
+                    id="body" 
+                    class="form-control" 
+                    formControlName="body" 
+                    [class.is-invalid]="form.get('body')?.invalid && form.get('body')?.touched "
+                >
+                <div class="invalid-feedback">
+                    body 
+                    <span *ngIf="form.get('body')?.errors?.['required']"> obbligatorio</span>
+                    
+                </div>
+            </div>
+            <input type="submit" value="Login" class="btn btn-info" [disabled]="form.invalid"> 
+        </form>
+    </div>
+    
+</div>

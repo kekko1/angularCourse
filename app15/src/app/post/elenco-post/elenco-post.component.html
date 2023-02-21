@@ -1,0 +1,22 @@
+<h2>Elenco Film</h2>
+<table class = "table">
+    <thead>
+        <tr>
+          
+            <td>userId</td>
+            <td>Titolo</td>
+            <td>Body</td>
+            <td></td>
+        </tr>
+       
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of posts">
+          
+            <td>{{p.userId}}</td>
+            <td>{{p.title}}</td>
+            <td>{{p.body}}</td>
+            <td><a routerLink="/dettaglio-post/{{p.id}}">Dettaglio</a></td>
+        </tr>
+    </tbody>
+</table>
