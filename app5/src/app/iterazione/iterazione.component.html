@@ -1,0 +1,15 @@
+<h2>Direttive di iterazione</h2>
+<p>Elenco nomi: </p>
+<div >
+    <ul>
+        <li *ngFor="let n of nomi;let i = index"><p>nome in posizione {{i}}: {{n}} </p></li>
+    </ul>
+</div>
+<p>Elenco oggetti: </p>
+<div >
+    <ol>
+        <li *ngFor="let p of persone;">
+            <p> {{p.nome}} {{p.cognome}} </p>
+        </li>
+    </ol>
+</div>

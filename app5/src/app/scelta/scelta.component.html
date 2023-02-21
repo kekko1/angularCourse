@@ -1,0 +1,19 @@
+<h2>Direttive di scelta</h2>
+<h3>*ngIf</h3>
+<button [hidden]="pulsanteNascosto">clicca1</button>
+<button [hidden]="!pulsanteVisibile">clicca2</button>
+
+<p *ngIf="paragrafoVisibile">paragrafo</p>
+<p *ngIf="numero<6"> numero maggiore di 5</p>
+<p>qui sotto potrebbe apparire un componente</p>
+<app-componente *ngIf="componenteVisibile"></app-componente>
+<p>Qui sotto forse appare un tipo</p>
+<div  *ngIf="persona">
+    <p>Nome:{{persona.nome}}</p>
+    <p>Cognome: {{persona.cognome}}</p>
+    <p>CF:{{persona.cf}}</p>
+</div>
+<h3>ngSwitch</h3>
+<p [ngSwitch]="paese">
+    <span *ngSwitchCase="'Italia'">EUR </span>
+</p>
