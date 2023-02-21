@@ -1,0 +1,29 @@
+<h2>Riferimenti(template variables)</h2>
+<p>Controllo se numero {{numero}} è magiiore di 5</p>
+<p *ngIf="numero >5 else falso">numero è maggiore di 5</p>
+<ng-template #falso>numero non è maggiore di 5</ng-template>
+
+<h3>Recupero da input</h3>
+<p>
+    Nome : <input type="text" #nome>
+    <button (click)="leggiNome(nome)">leggi</button>
+</p>
+
+<h3>Gestione di persone</h3>
+<p>
+    <input type="text" #nomePersona>Nome
+    <input type="text" #cognomePersona>Cognome
+    <button (click)="inserisci(nomePersona,cognomePersona)">inserisci</button>
+</p>
+<p>Elenco persone</p>
+<ul>
+    <li *ngFor="let p of elencoPersone; let i=index">
+        <p>{{p.nome}} - {{p.cognome}}</p><button (click)="elimina(i)">X</button>
+    </li>
+</ul>
+<h3>Richiamo di metodi dei componenti</h3>
+<app-auto #auto></app-auto>
+<button (click)="auto.vediDati()">mostra dati auto</button>
+
+<h3>Viewchild</h3>
+<p #paragrafo></p>

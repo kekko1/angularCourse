@@ -1,0 +1,86 @@
+<h2>Direttive di attributo</h2>
+<h3>Style vecchio approccio</h3>
+<p>Esempio stile dinamico con il property binding
+    <span [style]="stile1">
+        Testo di prova
+    </span>
+</p>
+<p>Altro esempio con binding di proprieta
+    <span [style.color]="colore1">
+        Testo di prova
+    </span>
+</p>
+<ul>
+    <li *ngFor="let a of animali" 
+        [style.color]="a.length> 6 ? 'red' : 'black'" >
+        {{a}}
+    </li>
+</ul>
+<h3>ngStyle</h3>
+<p>esempio di stile con ngStyle
+    <span [ngStyle]="stile2">
+        Testo di prova
+    </span>
+</p>
+<ul>
+    <li *ngFor="let a of animali" [ngStyle]="getStyle(a)">
+        {{a}}
+    </li>
+</ul>
+
+<h3>Class vecchio approccio</h3>
+<p>Esempio classe dinamico con il property binding
+    <span [class]="class1">
+        Testo di prova
+    </span>
+</p>
+<p>elenco animali con property binding</p>
+<ul>
+    <li *ngFor="let a of animali" 
+        [class]="a.length> 6 ? 'grassetto' : ''" >
+        {{a}}
+    </li>
+</ul>
+<p>Appplico la classe grassetto in base alla lunghezza</p>
+<ul>
+    <li *ngFor="let a of animali" 
+        [class.grassetto]="a.length> 6 " >
+        {{a}}
+    </li>
+</ul>
+
+
+<h3> NgClass </h3>
+<p>Esempio classe  data da variabile
+    <span [ngClass]="class2">
+        Testo di prova
+    </span>
+</p>
+<p>esempio classe data da un array
+
+    <span [ngClass]="elencoClassi">
+        Testo di prova
+    </span>
+</p>
+<p>
+    applico dinamicamente la classe evidenziato 
+</p>
+<ul>
+    <li *ngFor="let a of animali" 
+       [ngClass]="{'evidenziato':a.length > 6,'grassetto':a.charAt(0) =='s'}" >
+        {{a}}
+    </li>
+</ul>
+
+
+<ul>
+    <li *ngFor="let a of animali" 
+       [ngClass]="getClass(a)" >
+        {{a}}
+    </li>
+</ul>
+<p>Esempio di applicazione dinamica di classe usando un oggetto definito da una variabile, su cui posso interagire
+<span [ngClass]="oggettoClasse">testo di prova</span>
+<button (click)="evidenzia()">evidenzia</button>
+<button (click)="grassetto()">grassetto</button>
+</p>

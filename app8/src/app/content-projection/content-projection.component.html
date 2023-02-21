@@ -1,0 +1,11 @@
+<h2>content-projection</h2>
+<p>esempio senza proiezione</p>
+<app-pulsante></app-pulsante>
+<p>esempio con proiezione</p>
+<app-pulsante *ngFor="let c of comandi">{{c}}</app-pulsante>
+<p>Articolo in vendita</p>
+<app-articolo *ngFor="let a of articoli">
+    <h3 nome>{{a.nome}}</h3>
+    <p descrizione>{{a.descrizione}}</p>
+    <p prezzo>{{a.prezzo}} </p>
+</app-articolo>

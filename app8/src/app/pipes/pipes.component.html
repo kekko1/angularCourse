@@ -1,0 +1,24 @@
+<h2>Pipes</h2>
+<!-- sono delle funzioni di angular ed è possibile farne di nuove
+     utilizzate per la visualizzazione di dati -->
+<h3>Numeri</h3>
+<p>numero: {{numero | number: '5.'}} </p>
+<p>numero: {{numero | number: '.2-2'}} </p>
+<h3>Stringhe</h3>
+<p>parola: {{parola | uppercase}}</p>
+<p>parola: {{parola | lowercase}}</p>
+<p>parola: {{parola | slice:0:4}}</p>
+<h3>Percentuali</h3>
+<p>Sconto: {{sconto | percent }} </p>
+
+<h3>Date e orari</h3>
+<p>oggi: {{oggi | date }} </p>
+<p>oggi: {{oggi | date:"shortDate" }} </p>
+<p>oggi: {{oggi | date:"shortTime" }} </p>
+<p>oggi: {{oggi | date:"long" }} </p>
+<p>oggi: {{oggi | date:"EEE" }} </p>
+<p>oggi: {{oggi | date:"EEEE dd" }} </p>
+<p>oggi: {{oggi | date:"dd/MM/yyyy hh:mm" }} </p>
+
+<h3>Valute</h3>
+<p>prezzo: {{prezzo | currency: 'EUR'}} </p>
