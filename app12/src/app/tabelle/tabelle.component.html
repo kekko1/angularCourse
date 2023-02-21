@@ -1,0 +1,114 @@
+<div class="container">
+    <h2>Tabelle</h2>
+    <h3>Tabella normale</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Codice</th>
+                <th>Nome</th>
+                <th>Cognome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Francesco</td>
+                <td>Aduni</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Carlo</td>
+                <td>Sacco</td>
+            </tr>
+        </tbody>
+       
+    </table>
+    <h3>Tabella Bordi</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Codice</th>
+                <th>Nome</th>
+                <th>Cognome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Francesco</td>
+                <td>Aduni</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Carlo</td>
+                <td>Sacco</td>
+            </tr>
+        </tbody>
+       
+    </table>
+    <h3>Tabella Bordi e righe alternate</h3>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Codice</th>
+                <th>Nome</th>
+                <th>Cognome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Francesco</td>
+                <td>Aduni</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Carlo</td>
+                <td>Sacco</td>
+            </tr>
+        </tbody>
+       
+    </table>
+    <h3>Tabella Dark</h3>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Codice</th>
+                <th>Nome</th>
+                <th>Cognome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Francesco</td>
+                <td>Aduni</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Carlo</td>
+                <td>Sacco</td>
+            </tr>
+        </tbody>
+       
+    </table>
+
+
+    <h3>Tabella Dinamica</h3>
+    <table class="table">
+        <thead>
+            <tr >
+                <th>Codice</th>
+                <th>Nome</th>
+                <th>Cognome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of persona">
+                <td>{{p.codice}}</td>
+                <td>{{p.cognome}}</td>
+                <td>{{p.nome}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
