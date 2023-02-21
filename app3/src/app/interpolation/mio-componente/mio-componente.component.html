@@ -1,0 +1,19 @@
+<article>
+    <h3>Mio Componente</h3>
+    <h4>mostrare variabili</h4>
+    <p>contenuto dinamico preso da un attributo della 
+        classe TS: {{nome || "utente"}}</p>
+    <p>Benvenuto {{nome}}</p>
+    <h4>Visualizzare risultato di calcoli: </h4>
+    <p>Prezzo articolo  {{prezzo}}</p>
+    <p>Numero pezzi {{pezzi}}</p>
+    <p>totale = {{prezzo *  pezzi}}</p>
+    <h4>Chiamata metodi</h4>
+    <p>Noninativo {{nomeUtente.charAt(0) +'. '+ cognomeUtente.toUpperCase()}}</p>
+    <p>Data di oggi {{oggi}}</p>
+    <p>Data in formato locale {{oggi.toLocaleDateString('it')}}</p>
+    <p>Orario in formato locale {{oggi.toLocaleTimeString('it')}}</p>
+    <h4>Percorsi dinamini (sconsigliato)</h4>
+    <p><a href="{{link}}">Clicca per andare su google</a></p>
+
+</article>

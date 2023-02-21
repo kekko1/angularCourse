@@ -1,0 +1,22 @@
+<div>
+    <h3>Esempio di property binding</h3>
+    <h4>Immagini</h4>
+    <p><img [src]="percorsoImg" alt="altImg"></p>
+    <h4>Immagini</h4>
+    <p>stessa immagine ma cliccabile</p>
+    <a [href]="percorsoLink" [title]="titoloLink"><img [src]="percorsoImg" alt="altImg"></a>
+    <h4>Contenuto dinamico tag</h4>
+    <p>valore temperatura  : 
+        <span [innerHTML]="temperatura"> 0</span>
+    </p>
+
+    <h4>Elementi di form</h4>
+    <button [disabled]="pulsanteDisabilitato">clicca</button>
+    <input [disabled]="casellaDisabilitato"type="text">
+
+    <h4>Stile dinamico</h4>
+    <p [style]="stileParagrafo">Testo formattato</p>
+
+    <h4>testo con classe dinamica</h4>
+    <p [class]="classiParagrafo">Testo con classe dinamica</p>
+</div>

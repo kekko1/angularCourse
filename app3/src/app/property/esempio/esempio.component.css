@@ -1,0 +1,16 @@
+img{
+    width: 150px;
+}
+span{
+    font-weight: bold;
+    color: blue;
+}
+.centrato{
+    text-align: center;
+}
+.evidenziato{
+    background-color: chartreuse;
+}
+div{
+    border: 2px solid orange;
+}
