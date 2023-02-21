@@ -1,0 +1,35 @@
+<h2>Operatori</h2>
+<p>
+    comando della libreria rxjs per effettuare azioni su ciascun elemento dsell stream
+</p>
+<p>
+    Gli operatori vengono eseguiti in cascata all-interno di una sequenza detta pipe 
+    [generazione stream].[pipe].[termine stream] che diuventa:
+    observable.pipe().subscribe(observer)
+</p>
+<p>elenco degli operatori piu usati:</p>
+
+<ul>
+    <li>Map: trasforma l'elemento della sequenza 
+        generandone uno nuovo al suo posto
+    </li>
+    <li>Tap: trasforma l'elemento della sequenza 
+       senza alterare l'elemento della sequenza
+    </li>
+    <li>Take: limita gli elementi della sequenza e ti permette di scartare quelli che non servono 
+
+     </li>
+     <li>skip: limita gli elementi della sequenza, prende gli ultimi
+     </li>
+</ul>
+
+<div class="container">
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary" (click)="esempio1()">Esempio1</button>
+        <button type="button" class="btn btn-primary" (click)="esempio2()">Esempio2</button>
+        <button type="button" class="btn btn-primary" (click)="esempio3()">Esempio3</button>
+        <button type="button" class="btn btn-primary" (click)="esempio4()">Esempio4</button>
+        <button type="button" class="btn btn-primary" (click)="esempio5()">Esempio5</button>
+        <button type="button" class="btn btn-primary" (click)="esempio6()">Esempio6</button>
+    </div>
+</div>

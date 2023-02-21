@@ -1,0 +1,11 @@
+
+
+ export const elencoFilm : Film[] =[
+    {
+        id:1,
+        titolo:"",
+        genere:""
+    }
+];
+
+ export const elencoFilm$ :Observable<Film[]> = of(elencoFilm);

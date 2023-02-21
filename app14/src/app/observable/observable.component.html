@@ -1,0 +1,28 @@
+<h2>Observable</h2>
+<p>sequenza (stream)di elementi che arrivano nel tempo</p>
+<p>per poterlo usare un osservatore(observer) deve effettuarte l'iscrizione  ad esso (subscription)</p>
+<p>Per ciascun elemento della sequenza, l'observer riceve tre tipi di notifiche</p>
+<ul>
+    <li>
+        next, notifica il prossimo elemento della sequenza e lo restituisce
+    </li>
+    <li>
+        error, notifica un eventuale errore e lo restituisce
+    </li>
+    <li>
+        complete, notifica il termine della sequenza
+    </li>
+</ul>
+<div class="container">
+
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-primary" (click)="esempio1()">Esempio1</button>
+        <button type="button" class="btn btn-primary" (click)="esempio2()">Esempio2</button>
+        <button type="button" class="btn btn-primary" (click)="esempio3(0)">Esempio3 start</button>
+        <button type="button" class="btn btn-primary" (click)="esempio3(1)">Esempio3 stop</button>
+        <button type="button" class="btn btn-primary" (click)="esempio4()">Esempio4</button>
+        <button type="button" class="btn btn-primary" (click)="esempio5(0)">Esempio5 start</button>
+        <button type="button" class="btn btn-primary" (click)="esempio5(1)">Esempio5 stop</button>
+        <button type="button" class="btn btn-primary" (click)="esempio6()">Esempio6</button>
+      </div>
+</div>
