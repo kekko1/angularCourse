@@ -1,0 +1,10 @@
+<h3>Dati del cliente:</h3>
+<ul>
+    <li>Nome: {{cliente.nome}}</li>
+    <li>Cognome: {{cliente.cognome}}</li>
+    <li>Contratti: {{cliente.contratti}}</li>
+</ul>
+<p>Modifica i dati</p>
+<p><input type="text" [(ngModel)]="cliente.nome" >Nome</p>
+<p><input type="text" [(ngModel)]="cliente.cognome">Cognome</p>
+<p><input type="text" [(ngModel)]="cliente.contratti">Contratti</p>

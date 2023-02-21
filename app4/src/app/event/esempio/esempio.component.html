@@ -1,0 +1,12 @@
+<div>
+    <h3>Esempio</h3>
+    <p [innerHtml] = "display"></p>
+    <button (click) = "onClick()">clicca</button>
+    <button (click) = "onReset()">reset</button>
+    <h3>Attivare / disattivare elementi</h3>
+    <input type="text" [disabled]="casellaDisabilitata">
+    <button (click) = "onAbilita()">abilita</button>
+    <button (click) = "onCambia()">
+        {{ casellaDisabilitata ? "abilita":"disabilita"}}
+    </button>
+</div>
