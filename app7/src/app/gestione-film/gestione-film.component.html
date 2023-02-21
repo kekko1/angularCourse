@@ -1,0 +1,17 @@
+<h2>Gestione film</h2>
+<p>elenco dei film</p>
+<div>
+    <h3 *ngIf=(filmSelezionato)>
+        <article >
+            <h3>Hai selezionato: </h3>
+            <ul  >
+                <li>{{filmSelezionato.codice}}</li>
+                <li>{{filmSelezionato.titolo}}</li>
+                <li>{{filmSelezionato.genere}}</li>
+                <li>{{filmSelezionato.anno}}</li>
+            </ul>
+        </article>
+    </h3>
+</div>
+<app-film (selezionaFilm)="selezionato($event)" [film]="f" *ngFor="let f of elencoFilm" ></app-film>
+

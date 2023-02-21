@@ -1,0 +1,7 @@
+<h2>Gestione Pulsanti</h2>
+<p>
+    <button *ngFor="let t of testiPulsanti" (click)="onClick(t)">{{t}}</button>
+</p>
+<p> 
+    <app-pulsante (pulsanteCliccato)="onClickFiglio($event)" [testo]="t" *ngFor="let t of testiPulsanti" ></app-pulsante>  
+</p>
