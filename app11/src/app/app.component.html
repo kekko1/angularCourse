@@ -1,0 +1,10 @@
+<h1>Clinica Orco</h1>
+<div class="banner"></div>
+<app-navbar></app-navbar>
+<p id="benvenuto">Benvenuto {{utente.username}}
+    <span *ngIf="utente.autenticato" >
+        <a href="javascript:;"(click)="logout()">clicca</a>
+        (logout) 
+    </span>
+</p>
+<router-outlet></router-outlet>

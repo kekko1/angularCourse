@@ -1,0 +1,11 @@
+a{
+    text-decoration: none;
+    margin-right: 10px;
+    color: rgb(113, 23, 0);
+}
+a:hover{
+    text-decoration: underline;
+}
+a.active{
+    color: rgb(230, 172, 57);
+}

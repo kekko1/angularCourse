@@ -1,0 +1,13 @@
+.header{
+    height: 150px;
+    background-color:aliceblue
+}
+h1{
+    color:darkred;
+    margin-left: 20px;
+}
+#benvenuto{
+    text-align:right;
+    font-style: italic;
+    position: relative;
+}
